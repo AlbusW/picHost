@@ -1,6 +1,6 @@
 {
-  "name": "crx_tpl",
-  "description": "A Vue.js Chrome Extension Project",
+  "name": "PicHost",
+  "description": "图床助手，帮助上传图片到七牛，提供多种格式链接复制功能",
   "version": "1.0.0",
   "author": "albus",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "wcer": "^1.0.3",
+    "webpack-chrome-extension-reloader": "^0.8.3",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.2"

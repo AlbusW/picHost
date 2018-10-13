@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const { resolve, page, assetsPath } = require('./util')
@@ -8,9 +7,7 @@ module.exports = {
   entry: {
     popup: resolve('src/popup'),
     options: resolve('src/options'),
-    // content: resolve('src/content'),
     background: resolve('src/background'),
-    // inject: resolve('src/content/inject'),
   },
   output: {
     path: resolve('dist'),
@@ -116,7 +113,11 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: resolve('static')
+        from: resolve('static'),
+        ignore: ['.*'],
+      },
+      {
+        from: resolve('src/manifest.json')
       }
     ])
   ],

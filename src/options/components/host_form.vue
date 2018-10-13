@@ -20,7 +20,7 @@
       <Input
         v-else
         clearable
-        v-model="form[item.key]"
+        v-model.trim="form[item.key]"
         :placeholder="item.placeholder"
         :type="item.key === 'secretKey' ? 'password' : 'text'"
       />

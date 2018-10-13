@@ -1,0 +1,37 @@
+{
+  "name": "PicHost",
+  "version": "1.0.0",
+  "description": "图床助手，帮助上传图片到七牛，提供多种格式链接复制功能",
+  "author": "albus_w",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/upload-16.png",
+    "48": "icons/upload-48.png",
+    "128": "icons/upload-128.png"
+  },
+  "permissions": [
+    "*://*/",
+    "storage",
+    "cookies",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/upload-16.png",
+      "48": "icons/upload-48.png",
+      "128": "icons/upload-128.png"
+    },
+    "default_title": "pic-host \r图床助手",
+    "default_popup": "pages/popup.html"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "options_page": "pages/options.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

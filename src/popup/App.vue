@@ -42,7 +42,6 @@ export default {
     getStorageData(key) {
       let keyMap = key ? [key] : ['picHostUserInfo', 'picHostPicList'];
       utils.getStorage(keyMap).then((res) => {
-        console.log(res)
         if (res) {
           keyMap.map(key => {
             this[storageMap[key].data] = res[key] ?

@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const ChromeReloadPlugin  = require('wcer')
+const ChromeReloadPlugin  = require('webpack-chrome-extension-reloader')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const baseConf = require('./webpack.base.conf')
 const { resolve } = require('./util')
@@ -15,7 +15,6 @@ module.exports = merge(baseConf, {
     }),
     new ChromeReloadPlugin({
       port: 2333,
-      manifest: resolve('src/manifest.js')
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new FriendlyErrorsPlugin()
